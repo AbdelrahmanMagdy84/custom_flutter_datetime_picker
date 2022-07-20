@@ -470,55 +470,62 @@ class _DatePickerState extends State<_DatePickerComponent> {
     );
   }
 
-  // Title View
-  Widget _renderTitleActionsView(DatePickerTheme theme) {
+ Widget _renderTitleActionsView(DatePickerTheme theme) {
     final done = _localeDone();
     final cancel = _localeCancel();
+    final title = _localeTitle();
 
     return Container(
       height: theme.titleHeight,
       decoration: BoxDecoration(
         color: theme.headerColor ?? theme.backgroundColor,
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Container(
-            height: theme.titleHeight,
-            child: CupertinoButton(
-              pressedOpacity: 0.3,
-              padding: EdgeInsetsDirectional.only(start: 16, top: 0),
-              child: Text(
-                '$cancel',
-                style: theme.cancelStyle,
+      child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Expanded(
+              flex: 3,
+              child: Container(
+                height: theme.titleHeight,
+                padding: EdgeInsets.only(
+                  top: 5,
+                ),
+                child: Text(
+                  '$title',
+                  style: theme.cancelStyle,
+                ),
               ),
-              onPressed: () {
-                Navigator.pop(context);
-                if (widget.route.onCancel != null) {
-                  widget.route.onCancel!();
-                }
-              },
             ),
-          ),
-          Container(
-            height: theme.titleHeight,
-            child: CupertinoButton(
-              pressedOpacity: 0.3,
-              padding: EdgeInsetsDirectional.only(end: 16, top: 0),
-              child: Text(
-                '$done',
-                style: theme.doneStyle,
+            Expanded(
+              flex: 2,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.only(right: 16, top: 0, bottom: 2),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.all(2),
+                          primary: theme.cancelStyle.color),
+                      child: FittedBox(
+                        child: Text(
+                          '$done',
+                          style: theme.doneStyle,
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context, widget.pickerModel.finalTime());
+                        if (widget.route.onConfirm != null) {
+                          widget.route
+                              .onConfirm!(widget.pickerModel.finalTime()!);
+                        }
+                      },
+                    ),
+                  ),
+                ],
               ),
-              onPressed: () {
-                Navigator.pop(context, widget.pickerModel.finalTime());
-                if (widget.route.onConfirm != null) {
-                  widget.route.onConfirm!(widget.pickerModel.finalTime()!);
-                }
-              },
             ),
-          ),
-        ],
-      ),
+          ]),
     );
   }
 
@@ -528,6 +535,10 @@ class _DatePickerState extends State<_DatePickerComponent> {
 
   String _localeCancel() {
     return i18nObjInLocale(widget.locale)['cancel'] as String;
+  }
+
+  String _localeTitle() {
+    return i18nObjInLocale(widget.locale)['title'] as String;
   }
 }
 
