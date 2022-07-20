@@ -487,12 +487,13 @@ class _DatePickerState extends State<_DatePickerComponent> {
               fit: FlexFit.loose,
               flex: 3,
               child: Container(
-                width: MediaQuery.of(context).size.width * 0.95,
+                width: MediaQuery.of(context).size.width,
                 height: theme.titleHeight,
                 padding: EdgeInsets.only(
                   top: 5,
                 ),
                 child: Card(
+                  color: theme.headerColor,
                   child: Padding(
                     padding: const EdgeInsets.all(1.0),
                     child: FittedBox(
@@ -512,7 +513,7 @@ class _DatePickerState extends State<_DatePickerComponent> {
                 children: <Widget>[
                   Container(
                     padding: EdgeInsets.only(
-                        right: MediaQuery.of(context).size.width * 0.035,
+                        right: MediaQuery.of(context).size.width * 0.03,
                         top: 0,
                         bottom: 2),
                     child: ElevatedButton(
