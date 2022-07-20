@@ -130,8 +130,13 @@ class HomePage extends StatelessWidget {
                 )),
             TextButton(
                 onPressed: () {
-                  DatePicker.showTimePicker(context, showTitleActions: true,
-                      onChanged: (date) {
+                  DatePicker.showTimePicker(context,
+                      showTitleActions: true,
+                      theme: DatePickerTheme(
+                          doneStyle: TextStyle(color: Colors.black),
+                          // cancelStyle: TextStyle(fontSize: 10),
+                          titleHeight: MediaQuery.of(context).size.height *
+                              0.1), onChanged: (date) {
                     print('change $date in time zone ' +
                         date.timeZoneOffset.inHours.toString());
                   }, onConfirm: (date) {
@@ -170,8 +175,9 @@ class HomePage extends StatelessWidget {
                 },
                 child: Text(
                   'show date time picker (Chinese)',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Color.fromARGB(255, 37, 40, 43)),
                 )),
+            ///////////////////////////////////////////
             TextButton(
                 onPressed: () {
                   DatePicker.showDateTimePicker(context, showTitleActions: true,
@@ -186,6 +192,7 @@ class HomePage extends StatelessWidget {
                   'show date time picker (English-America)',
                   style: TextStyle(color: Colors.blue),
                 )),
+            //////
             TextButton(
                 onPressed: () {
                   DatePicker.showDateTimePicker(context, showTitleActions: true,

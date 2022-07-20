@@ -38,6 +38,7 @@ enum LocaleType {
 
 final _i18nModel = <LocaleType, Map<String, Object>>{
   LocaleType.kh: {
+    'title': 'Birth date',
     'cancel': 'បោះបង់',
     'done': 'រួចរាល់',
     'today': 'ថ្ងៃនេះ',
@@ -111,6 +112,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.mn: {
+    'title': 'Birth date',
     'cancel': 'Гарах',
     'done': 'Дуусгах',
     'today': 'Өнөөдөр',
@@ -147,6 +149,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.fa: {
+    'title': 'Birth date',
     'cancel': 'لغو',
     'done': 'تایید',
     'today': 'امروز',
@@ -191,6 +194,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'عصر'
   },
   LocaleType.zh: {
+    'title': 'Birth date',
     //Chinese
     'cancel': '取消',
     'done': '确定',
@@ -228,6 +232,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': '下午'
   },
   LocaleType.tw: {
+    'title': 'Birth date',
     //Traditional Chinese
     'cancel': '取消',
     'done': '確定',
@@ -265,6 +270,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': '下午'
   },
   LocaleType.nl: {
+    'title': 'Birth date',
     //Dutch
     'cancel': 'Annuleer',
     'done': 'Klaar',
@@ -310,6 +316,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.ru: {
+    'title': 'Birth date',
     'cancel': 'Отмена',
     'done': 'Готово',
     'today': 'Сегодня',
@@ -346,6 +353,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.it: {
+    'title': 'Birth date',
     'cancel': 'Annulla',
     'done': 'Conferma',
     'today': 'Oggi',
@@ -382,6 +390,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.fr: {
+    'title': 'Birth date',
     'cancel': 'Annuler',
     'done': 'Confirmer',
     'today': "Aujourd'hui",
@@ -418,6 +427,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.gr: {
+    'title': 'Birth date',
     'cancel': 'Άκυρο',
     'done': 'Επιβεβαίωση',
     'today': 'Σήμερα',
@@ -454,6 +464,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'μ.μ'
   },
   LocaleType.es: {
+    'title': 'Birth date',
     'cancel': 'Cancelar',
     'done': 'Confirmar',
     'today': 'Hoy',
@@ -490,6 +501,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.pl: {
+    'title': 'Birth date',
     'cancel': 'Anuluj',
     'done': 'Gotowe',
     'today': 'Dziś',
@@ -526,6 +538,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.pt: {
+    'title': 'Birth date',
     'cancel': 'Cancelar',
     'done': 'Confirmar',
     'today': 'Hoje',
@@ -562,6 +575,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.ko: {
+    'title': 'Birth date',
     'cancel': '취소',
     'done': '완료',
     'today': '오늘',
@@ -598,6 +612,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': '오후'
   },
   LocaleType.kk: {
+    'title': 'Birth date',
     'cancel': 'Жою',
     'done': 'Дайын',
     'today': 'бүгін',
@@ -679,6 +694,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'م'
   },
   LocaleType.tr: {
+    'title': 'Birth date',
     'cancel': 'İptal',
     'done': 'Tamam',
     'today': 'Bugün',
@@ -715,6 +731,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'ÖS'
   },
   LocaleType.az: {
+    'title': 'Birth date',
     'cancel': 'Ləğv et',
     'done': 'Bitdi',
     'today': 'Bugün',
@@ -751,6 +768,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'ÖS'
   },
   LocaleType.jp: {
+    'title': 'Birth date',
     //Japanese
     'cancel': 'キャンセル',
     'done': '完了',
@@ -788,6 +806,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': '午後'
   },
   LocaleType.de: {
+    'title': 'Birth date',
     //German
     'cancel': 'Abbrechen',
     'done': 'OK',
@@ -825,6 +844,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.da: {
+    'title': 'Birth date',
 //Danish
     'cancel': 'Annullér',
     'done': 'OK',
@@ -862,6 +882,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.bn: {
+    'title': 'Birth date',
 //Bengali
     'cancel': 'বাতিল',
     'done': 'সম্পন্ন',
@@ -907,6 +928,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.vi: {
+    'title': 'Birth date',
     'cancel': 'Hủy bỏ',
     'done': 'Xong',
     'today': 'Hôm nay',
@@ -943,6 +965,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'CH'
   },
   LocaleType.hy: {
+    'title': 'Birth date',
 //Armenian
     'cancel': 'Չեղարկել',
     'done': 'հաստատել',
@@ -980,6 +1003,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.id: {
+    'title': 'Birth date',
     'cancel': 'Batal',
     'done': 'Pilih',
     'today': 'Hari Ini',
@@ -1016,6 +1040,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.bg: {
+    'title': 'Birth date',
     'cancel': 'Отказ',
     'done': 'Готово',
     'today': 'Днес',
@@ -1052,6 +1077,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.eu: {
+    'title': 'Birth date',
     // basque
     'cancel': 'Ezeztau',
     'done': 'Onartu',
@@ -1089,6 +1115,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.cat: {
+    'title': 'Birth date',
     // catalan
     'cancel': 'Cancel·la',
     'done': 'Confirmar',
@@ -1126,6 +1153,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.th: {
+    'title': 'Birth date',
     //thai
     'cancel': 'ยกเลิก',
     'done': 'ตกลง',
@@ -1163,6 +1191,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.si: {
+    'title': 'Birth date',
     //Slovenian
     'cancel': 'Prekliči',
     'done': 'V redu',
@@ -1200,6 +1229,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': ''
   },
   LocaleType.no: {
+    'title': 'Birth date',
     'cancel': 'Avbryt',
     'done': 'Ferdig',
     'today': 'Idag',
@@ -1236,6 +1266,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': ''
   },
   LocaleType.sq: {
+    'title': 'Birth date',
     'cancel': 'Anulo',
     'done': 'Perfundo',
     'today': 'Sot',
@@ -1272,6 +1303,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'MD'
   },
   LocaleType.sv: {
+    'title': 'Birth date',
     'cancel': 'Avbryt',
     'done': 'Klar',
     'today': 'I dag',
@@ -1308,6 +1340,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.fi: {
+    'title': 'Birth date',
     'cancel': 'Peruuta',
     'done': 'Valmis',
     'today': 'Tänään',

@@ -3,7 +3,7 @@ library flutter_datetime_picker;
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
+
 import 'package:flutter_datetime_picker/src/datetime_picker_theme.dart';
 import 'package:flutter_datetime_picker/src/date_model.dart';
 import 'package:flutter_datetime_picker/src/i18n_model.dart';
@@ -405,14 +405,15 @@ class _DatePickerState extends State<_DatePickerComponent> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
-              child: widget.pickerModel.layoutProportions()[0] > 0
+              child: widget.pickerModel.layoutProportions()[2] > 0
                   ? _renderColumnView(
-                      ValueKey(widget.pickerModel.currentLeftIndex()),
+                      ValueKey(widget.pickerModel.currentMiddleIndex() * 100 +
+                          widget.pickerModel.currentLeftIndex()),
                       theme,
-                      widget.pickerModel.leftStringAtIndex,
-                      leftScrollCtrl,
-                      widget.pickerModel.layoutProportions()[0], (index) {
-                      widget.pickerModel.setLeftIndex(index);
+                      widget.pickerModel.rightStringAtIndex,
+                      rightScrollCtrl,
+                      widget.pickerModel.layoutProportions()[2], (index) {
+                      widget.pickerModel.setRightIndex(index);
                     }, (index) {
                       setState(() {
                         refreshScrollOffset();
@@ -447,15 +448,14 @@ class _DatePickerState extends State<_DatePickerComponent> {
               style: theme.itemStyle,
             ),
             Container(
-              child: widget.pickerModel.layoutProportions()[2] > 0
+              child: widget.pickerModel.layoutProportions()[0] > 0
                   ? _renderColumnView(
-                      ValueKey(widget.pickerModel.currentMiddleIndex() * 100 +
-                          widget.pickerModel.currentLeftIndex()),
+                      ValueKey(widget.pickerModel.currentLeftIndex()),
                       theme,
-                      widget.pickerModel.rightStringAtIndex,
-                      rightScrollCtrl,
-                      widget.pickerModel.layoutProportions()[2], (index) {
-                      widget.pickerModel.setRightIndex(index);
+                      widget.pickerModel.leftStringAtIndex,
+                      leftScrollCtrl,
+                      widget.pickerModel.layoutProportions()[0], (index) {
+                      widget.pickerModel.setLeftIndex(index);
                     }, (index) {
                       setState(() {
                         refreshScrollOffset();
@@ -470,9 +470,9 @@ class _DatePickerState extends State<_DatePickerComponent> {
     );
   }
 
- Widget _renderTitleActionsView(DatePickerTheme theme) {
+  Widget _renderTitleActionsView(DatePickerTheme theme) {
     final done = _localeDone();
-    final cancel = _localeCancel();
+
     final title = _localeTitle();
 
     return Container(
@@ -483,16 +483,26 @@ class _DatePickerState extends State<_DatePickerComponent> {
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Expanded(
+            Flexible(
+              fit: FlexFit.loose,
               flex: 3,
               child: Container(
+                width: MediaQuery.of(context).size.width * 0.95,
                 height: theme.titleHeight,
                 padding: EdgeInsets.only(
                   top: 5,
                 ),
-                child: Text(
-                  '$title',
-                  style: theme.cancelStyle,
+                child: Card(
+                  color: Colors.yellow,
+                  child: Padding(
+                    padding: const EdgeInsets.all(1.0),
+                    child: FittedBox(
+                      child: Text(
+                        '$title',
+                        style: theme.cancelStyle,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -502,7 +512,10 @@ class _DatePickerState extends State<_DatePickerComponent> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   Container(
-                    padding: EdgeInsets.only(right: 16, top: 0, bottom: 2),
+                    padding: EdgeInsets.only(
+                        right: MediaQuery.of(context).size.width * 0.035,
+                        top: 0,
+                        bottom: 2),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.all(2),
@@ -531,10 +544,6 @@ class _DatePickerState extends State<_DatePickerComponent> {
 
   String _localeDone() {
     return i18nObjInLocale(widget.locale)['done'] as String;
-  }
-
-  String _localeCancel() {
-    return i18nObjInLocale(widget.locale)['cancel'] as String;
   }
 
   String _localeTitle() {
