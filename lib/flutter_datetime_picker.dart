@@ -493,7 +493,6 @@ class _DatePickerState extends State<_DatePickerComponent> {
                   top: 5,
                 ),
                 child: Card(
-                  color: Colors.yellow,
                   child: Padding(
                     padding: const EdgeInsets.all(1.0),
                     child: FittedBox(
