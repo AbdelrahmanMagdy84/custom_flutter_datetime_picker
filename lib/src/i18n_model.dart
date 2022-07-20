@@ -33,9 +33,7 @@ enum LocaleType {
   sv,
   kh,
   tw,
-  fi,
-  uk,
-  he
+  fi
 }
 
 final _i18nModel = <LocaleType, Map<String, Object>>{
@@ -76,6 +74,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'ថ្ងៃ',
   },
   LocaleType.en: {
+    'title': 'Birth date',
     'cancel': 'Cancel',
     'done': 'Done',
     'today': 'Today',
@@ -635,6 +634,7 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'pm': 'PM'
   },
   LocaleType.ar: {
+    'title': 'تاريخ الميلاد',
     'cancel': 'إنهاء',
     'done': 'تأكيد',
     'today': 'اليوم',
@@ -1342,78 +1342,6 @@ final _i18nModel = <LocaleType, Map<String, Object>>{
     'day': ['Ma', 'Ti', 'Ke', 'To', 'Pe', 'La', 'Su'],
     'am': 'AM',
     'pm': 'PM'
-  },
-  LocaleType.uk: {
-    'cancel': 'Скасувати',
-    'done': 'Вибрати',
-    'today': 'Сьогодні',
-    'monthShort': [
-      'Січ',
-      'Лют',
-      'Бер',
-      'Квіт',
-      'Трав',
-      'Черв',
-      'Лип',
-      'Серп',
-      'Вер',
-      'Жовт',
-      'Лист',
-      'Груд'
-    ],
-    'monthLong': [
-      'Січень',
-      'Лютий',
-      'Березень',
-      'Квітень',
-      'Травень',
-      'Червень',
-      'Липень',
-      'Серпень',
-      'Вересень',
-      'Жовтень',
-      'Листопад',
-      'Грудень'
-    ],
-    'day': ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Нд'],
-    'am': 'AM',
-    'pm': 'PM'
-  },
-  LocaleType.he: {
-    'cancel': 'ביטול',
-    'done': 'סיום',
-    'today': 'היום',
-    'monthShort': [
-      'ינו׳',
-      'פבר׳',
-      'מרץ',
-      'אפר׳',
-      'מאי',
-      'יוני',
-      'יולי',
-      'אוג׳',
-      'ספט׳',
-      'אוק׳',
-      'נוב׳',
-      'דצמ׳'
-    ],
-    'monthLong': [
-      'ינואר',
-      'פברואר',
-      'מרץ',
-      'אפריל',
-      'מאי',
-      'יוני',
-      'יולי',
-      'אוגוסט',
-      'ספטמבר',
-      'אוקטובר',
-      'נובמבר',
-      'דצמבר'
-    ],
-    'day': ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת'],
-    'am': 'לפנה״צ',
-    'pm': 'אחה״צ',
   }
 };
 
